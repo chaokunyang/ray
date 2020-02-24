@@ -6,7 +6,7 @@ import ray.streaming.generated.streaming_pb2 as streaming_pb
 import ray.streaming.operator as operator
 import ray.streaming.partition as partition
 from ray.streaming import function
-from ray.streaming.generated.streaming_pb2 import Language
+from ray.core.generated.common_pb2 import Language
 
 
 class NodeType(enum.Enum):
@@ -15,7 +15,7 @@ class NodeType(enum.Enum):
 
     TRANSFORM: Operators transform one or more DataStreams into a new
      DataStream. Programs can combine multiple transformations into
-     sophisticated dataflow topologies.
+     sophisticated data flow topologies.
 
     SINK: Sinks consume DataStreams and forward them to files, sockets,
      external systems, or print them.

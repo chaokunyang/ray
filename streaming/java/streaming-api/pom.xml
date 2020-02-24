@@ -23,6 +23,11 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.ray</groupId>
+            <artifactId>ray-runtime</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
   <groupId>com.google.guava</groupId>
   <artifactId>guava</artifactId>
   <version>27.0.1-jre</version>

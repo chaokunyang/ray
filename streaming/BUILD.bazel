@@ -19,7 +19,10 @@ proto_library(
     name = "remote_call_proto",
     srcs = ["src/protobuf/remote_call.proto"],
     visibility = ["//visibility:public"],
-    deps = ["streaming_proto"],
+    deps = [
+        "streaming_proto",
+        "//:common_proto",
+    ],
 )
 
 cc_proto_library(
@@ -272,6 +275,8 @@ genrule(
             cp -f "$$f" "$$GENERATED_DIR"
         done
         sed -i -E 's/from streaming.src.protobuf/from ./' "$$GENERATED_DIR/remote_call_pb2.py"
+        sed -i -E 's/from src.ray.protobuf/from ray.core.generated/' "$$GENERATED_DIR/remote_call_pb2.py"
+        rm -f "$$GENERATED_DIR/common_pb2.py"
         date > $@
     """,
     local = 1,

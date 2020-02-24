@@ -1,7 +1,7 @@
 package org.ray.streaming.python;
 
 import java.util.List;
-import org.ray.streaming.api.Language;
+import org.ray.runtime.generated.Common.Language;
 import org.ray.streaming.api.context.RuntimeContext;
 import org.ray.streaming.operator.OperatorType;
 import org.ray.streaming.operator.StreamOperator;

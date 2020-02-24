@@ -32,7 +32,7 @@ public class GraphPbBuilder {
       nodeBuilder.setParallelism(node.getParallelism());
       nodeBuilder.setNodeType(
           Streaming.NodeType.valueOf(node.getNodeType().name()));
-      nodeBuilder.setLanguage(Streaming.Language.valueOf(node.getLanguage().name()));
+      nodeBuilder.setLanguage(node.getLanguage());
       byte[] functionBytes = serializeFunction(node.getStreamOperator().getFunction());
       nodeBuilder.setFunction(ByteString.copyFrom(functionBytes));
 

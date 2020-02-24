@@ -1,7 +1,7 @@
 package org.ray.streaming.operator;
 
 import java.util.List;
-import org.ray.streaming.api.Language;
+import org.ray.runtime.generated.Common.Language;
 import org.ray.streaming.api.collector.Collector;
 import org.ray.streaming.api.context.RuntimeContext;
 import org.ray.streaming.api.function.Function;

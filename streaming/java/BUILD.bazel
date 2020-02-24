@@ -35,6 +35,7 @@ define_java_module(
     define_test_lib = True,
     test_deps = [
         "//java:org_ray_ray_api",
+        "//java:org_ray_ray_runtime",
         ":org_ray_ray_streaming-api",
         "@ray_streaming_maven//:com_google_guava_guava",
         "@ray_streaming_maven//:org_slf4j_slf4j_api",
@@ -43,6 +44,8 @@ define_java_module(
     ],
     visibility = ["//visibility:public"],
     deps = [
+        "//java:org_ray_ray_api",
+        "//java:org_ray_ray_runtime",
         "@ray_streaming_maven//:com_google_guava_guava",
         "@ray_streaming_maven//:org_slf4j_slf4j_api",
         "@ray_streaming_maven//:org_slf4j_slf4j_log4j12",
@@ -193,6 +196,7 @@ genrule(
         for f in $(locations //streaming/java:all_java_proto); do
             unzip -o "$$f" -x META-INF/MANIFEST.MF -d "$$WORK_DIR/streaming/java/streaming-runtime/src/main/java"
         done
+        rm -rf "$$WORK_DIR/streaming/java/streaming-runtime/src/main/java/org/ray/runtime/generated"
         date > $@
     """,
     local = 1,

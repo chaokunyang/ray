@@ -4,11 +4,6 @@ package ray.streaming.proto;
 
 option java_package = "org.ray.streaming.runtime.generated";
 
-enum Language {
-  JAVA = 0;
-  PYTHON = 1;
-}
-
 enum NodeType {
   UNKNOWN = 0;
   // Sources are where your program reads its input from

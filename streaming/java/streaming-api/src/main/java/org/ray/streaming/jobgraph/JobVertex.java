@@ -2,7 +2,7 @@ package org.ray.streaming.jobgraph;
 
 import com.google.common.base.MoreObjects;
 import java.io.Serializable;
-import org.ray.streaming.api.Language;
+import org.ray.runtime.generated.Common.Language;
 import org.ray.streaming.operator.StreamOperator;
 
 /**

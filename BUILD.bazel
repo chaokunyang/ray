@@ -14,7 +14,7 @@ load("//bazel:ray.bzl", "COPTS", "PROPAGATED_WINDOWS_DEFINES")
 proto_library(
     name = "common_proto",
     srcs = ["src/ray/protobuf/common.proto"],
-    visibility = ["//java:__subpackages__"],
+    visibility = ["//visibility:public"],
 )
 
 cc_proto_library(
